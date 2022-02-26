@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Bebas+Neue|Shadows+Into+Light|Special+Elite&display=swap" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@200&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+<style>
+*{
+  font-family: 'Roboto Serif', sans-serif;
+  margin:20px;
+}
+body{
+    background: url("https://storage.pixteller.com/designs/designs-images/2019-03-27/05/simple-background-backgrounds-passion-simple-1-5c9b95bd34713.png");
+}
+.btn {
+      color: rgb(230, 16, 133);
+      margin-left: 100px;
+      margin-top: 20px;
+    }
+    input:focus {
+      outline: none;
+    }
+    .btn:hover {
+      color: black;
+      border: 1px solid black;
+    }
+    a{
+        color:black;
+        margin-left: 120px;
+    }
+    a:hover{
+        color: rgb(230, 16, 133);
+        style: underline;
+    }
+</style>
+<h1 style="margin-top: 60px;"> Update <%= @contact.name %> </h1>
+<form action="/updatecontact/<%=@contact.id%>" method="post">
+<label> Name: </label>
+    <input name="name" value="<%= @contact.name%>"/> <br><br>
+    <label> Email: </label>
+     <input name="email" value="<%= @contact.email%>"/> <br>
+     <input class="btn"type="submit">
+</form>
+
+   <%= link_to 'Dashboard', all_pages_path%>

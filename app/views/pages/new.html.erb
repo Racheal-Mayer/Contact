@@ -1,0 +1,478 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Bebas+Neue|Shadows+Into+Light|Special+Elite&display=swap" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@200&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <title>Hello!</title>
+
+  <style>
+    * {
+    border: none !important;
+    }
+    ::selection {
+        color: white;
+        background: rgb(230, 16, 133);
+    }
+    .jumbotron {
+          background: url("https://images.unsplash.com/photo-1543332164-6e82f355badc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          font-family: 'Roboto Serif', sans-serif;
+          padding-top: 5px !important;
+          vertical-align: top;
+          height: 700px;
+    }
+    #testing input{
+      background-color: black;
+      color: white;
+      border-radius: 20px;
+      width: 370px;
+      height: 40px;
+    }
+    #form3{
+      margin-right: 450px;
+      margin-left:-350px;
+    }
+    #testing input:focus{
+        box-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 60px #0fa,
+        0 0 60px #0fa; 
+    }
+    .footer {
+      background: url("https://images.unsplash.com/photo-1548031045-0ce1bd4a94ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100px;
+      width: 100%;
+    }
+    .card2 {
+      margin: 20px;
+      width: 300px;
+    }
+    .btn {
+      color: rgb(230, 16, 133);
+    }
+    input:focus {
+      outline: none;
+    }
+    .btn:hover {
+      color: white;
+    }
+    .display-4 {
+      background: none;
+      color: white;
+      display: inline-block;
+      font-size: 100px;
+      color: rgb(230, 16, 133);
+      margin-left: 15%;
+    }
+    a {
+      color: white;
+    }
+    a:hover {
+      color: rgb(230, 16, 133);
+    }
+    .link:hover {
+      color: white;
+    }
+    .hover:hover {
+      color: white;
+    }
+    .hover {
+      color: rgb(230, 16, 133);
+      background: none;
+    }
+    .lead {
+      background: none;
+      color: rgb(230, 16, 133);
+      display: inline-block;
+      font-family: 'Roboto Serif', sans-serif;
+      font-size: 25px;
+      margin-left: 15%;
+    }
+    .center {
+      font-family: 'Roboto Serif', sans-serif;
+      font-size: 20px;
+      padding: 5px;
+    }
+    .navbar-brand {
+      color: rgb(230, 16, 133);
+      background: none;
+      margin-top: 0;
+      display: inline-block;
+      margin-left: 80%;
+      font-size: 30px;
+      position: fixed;
+      width: 100%;
+    }
+    .recipes {
+      margin-left: 30%;
+    }
+    .icon {
+      background: none;
+      margin-top: 0;
+    }
+    .bigger {
+      margin-left: 37%;
+      font-size: 40px;
+    }
+    ul {
+      list-style-type: none;
+      margin-left: 70%;
+      padding: 0;
+      background: none;
+      margin-top: 20px;
+    }
+    #frame{
+      display:inline-block;
+      margin-left: 600px;
+      margin-top: -600px;
+    }
+    .input {
+      height: 40px;
+      width: 200px;
+      margin-left: 30%;
+    }
+    .dropbtn {
+      background: none;
+      color: rgb(230, 16, 133);
+      font-size: 35px;
+      border: none;
+      font-family: 'Roboto Serif', sans-serif;
+      margin-top: 25px;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      background: none;
+      margin-left: 75%;
+      margin-top: 0px;
+      color: rgb(230, 16, 133);
+    }
+    button:hover {
+      color: white;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: none;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+    .hover:hover{
+      color: #fff;
+      text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa; 
+    }
+    .neonText{
+      background-color:black;
+    }
+    .neonText:hover {
+      color: #fff;
+      background-color:black;
+      font-weight: bold;
+      text-shadow:
+          0 0 7px #fff,
+          0 0 10px #fff,
+          0 0 21px #fff,
+          0 0 42px #0fa,
+          0 0 82px #0fa,
+          0 0 92px #0fa,
+          0 0 102px #0fa,
+          0 0 151px #0fa;
+      
+    }
+    #testing{
+      display:inline-block;
+    }
+    .inputBorder{
+      box-shadow:
+        0 0 7px black,
+        0 0 10px black,
+        0 0 21px black,
+        0 0 42px #0fa,
+        0 0 30px #0fa,
+        0 0 30px #0fa,
+        0 0 30px #0fa,
+        0 0 30px #0fa; 
+        padding:10px;
+      border: none;
+    }
+    .border{
+      box-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #0fa,
+      0 0 30px #0fa,
+      0 0 30px #0fa,
+      0 0 30px #0fa,
+      0 0 30px #0fa; 
+      padding:10px;
+      text-align:center;
+    }
+    #testing button{
+      font-size: 20px;
+      color:rgb(230, 16, 133);
+    }
+    #testing p{
+      color: rgb(230, 16, 133);
+      font-size: 20px;
+    }
+    #testing button:hover{
+      color: white;
+    }
+    #testing a{
+      color: white;
+      font-size:30px;
+    }
+    #testing a:hover{
+      color: rgb(230, 16, 133);
+      font-size:30px;
+    }
+    #testing p{
+      font-size:25px;
+    }
+    .dropdown-content a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      background: none;
+      font-size: 20px;
+      font-family: 'Roboto Serif', sans-serif;
+    }
+    .link {
+      margin-left: 75%;
+      color: rgb(230, 16, 133);
+      background: none;
+      font-size: 30px;
+      font-family: 'Roboto Serif', sans-serif;
+      border: none;
+      background: none;
+    }
+    .card-img-top {
+      width: 90%;
+      height: 300px;
+      border-radius: 10px;
+    }
+    .card-title {
+      font-family: 'Roboto Serif', sans-serif;
+      font-size: 40px;
+      line-height: 12px;
+      color: rgb(230, 16, 133);
+    }
+    .card-text {
+      font-family: 'Roboto Serif', sans-serif;
+      font-size: 20px;
+      line-height: 20px;
+    }
+    .form {
+      display: inline-block;
+      line-height: 1;
+      font-family: 'Roboto Serif', sans-serif;
+      font-size: 20px;
+      color: rgb(62, 72, 43);
+    }
+    .login {
+      display: inline-block;
+      line-height: 1.5;
+      font-family: 'Roboto Serif', sans-serif;
+      font-size: 20px;
+      color: rgb(62, 72, 43);
+    }
+    .footer2 {
+      width: 100%;
+      background: url("https://images.unsplash.com/photo-1548031045-0ce1bd4a94ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+      color: white;
+      text-align: center;
+      display: inline-block;
+    }
+    .dropdown-content a:hover {
+      background: none;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown:hover .dropbtn {
+      background: none;
+    }
+    .display-4{
+      font-size: 70px;
+    }
+</style>
+<body>
+
+
+  <div class="jumbotron">
+    <div style="display: inline-block;" id="testing">
+      <p style="margin-top: 50px;">input app_id and mouseout <br> to load any Messenger!</p>
+      <input type="text" placeholder="Enter app_id" onblur="getVal()"> <br> <br>
+        <div class="border">
+          <button class="btn" onClick="onBoot()">Boot</button> 
+          <button class="btn" onClick="shutDown()">Shutdown</button> <br>
+          <button class="btn" onClick="show()">Show Messenger</button> <br>
+          <button class="btn" onClick="update()">Update</button> 
+          <button class="btn" onClick="showNew()">See New Messages</button> <br>
+          <button class="btn" onClick="hide()">Hide Messenger</button> <br>
+          <button class="btn" onClick="trackEvent()">Event</button> 
+          <button class="neonText" onclick="Intercom('showNewMessage', 'Feedback on the new reports feature:')">  Send us your feedback!</button>
+        </div>
+    </div>
+     <div id="frame" style=" display:inline-block;margin-left:600px;">
+        <h1 style="color:white;">Contact Form</h1>
+        <form action="/create" action="post">
+            <input type="text" name="email" placeholder="email"/> <br><br>
+            <input type="text" name="note" placeholder="user note"/> <br>
+            <input type="text" style="margin-top:20px;" name="tagName2" placeholder="Add user tag"/> <br>
+            <textarea style="margin-top:20px;"class="inputBorder" name="message" placeholder="message"> </textarea><br>
+            <input class="btn" type="submit"/>
+        </form>
+        </div>
+  </div>
+  <div class="card-deck">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-title">Create new email</p>
+        <p class="card-text">
+           <form action="/email" method="post">
+            <%# <input type="text" name="subject" placeholder="subject"/> <br><br> %>
+            <input type="text" name="body" placeholder="write email here"/> <br><br>
+          <input class="btn" type="submit"/>
+        </form>
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1515704089429-fd06e6668458?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-title">Create new attribute</p>
+        <p class="card-text"> 
+        <form action="/attribute" method="post">
+            <input style="border-style: 2px solid black;" type="text" name="attName" placeholder="new attribute name"/> <br>
+            <input type="text" name="dataType" placeholder="data type"/> 
+          <input class="btn" style="border-style: 2px solid black;" type="submit"/>
+        </form>
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1528870884180-5649b20f6435?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-title">Create new article</p>
+      <p class="card-text">
+      <form action="/article" method="post">
+            <input type="text" name="title" placeholder="Article title here"/> <br><br>
+             <input type="text" name="description" placeholder="Article description here"/> <br><br>
+          <input class="btn" type="submit"/>
+        </form>
+      </p>
+    </div>
+  </div>
+</div>
+<div class="footer2">
+  <a type="button" class="btn-floating btn-fb"> <i class="fab fa-facebook-f"></i></a>
+  <a type="button" class="btn-floating btn-tw"> <i class="fab fa-twitter"></i> </a>
+  <a type="button" class="btn-floating btn-gplus"><i class="fab fa-google-plus-g"></i></a> <br>
+  <i class="fas fa-home mr-3"></i> Chicago, IL <br>
+   <%= link_to 'Dashboard', all_pages_path%>
+  <br>
+  <br>
+</div>
+
+<script>
+  var app_id;
+    window.intercomSettings = {
+    app_id: 'mgkzgbro'
+  };
+</script>
+<script>
+  (function(){
+    var w=window;
+    var ic=w.Intercom;
+    if(typeof ic==="function")
+    {ic('reattach_activator');ic('update',w.intercomSettings);}
+    else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args)
+    {i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');
+    s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/mgkzgbro';
+    var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};
+    if(document.readyState==='complete'){l();}else if(w.attachEvent)
+    {w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+<script>
+var appId;
+
+function onBoot() {
+    Intercom('boot', {  
+    app_id: 'mgkzgbro'
+    }
+  );
+}
+function trackEvent(){
+    var metadata = {
+    invitee_email: 'pi@example.org',
+    invite_code: 'ADDAFRIEND'
+  };
+  Intercom('trackEvent', 'invited-friend', metadata);
+  console.log(metadata);
+}
+function shutDown(){
+    Intercom('shutdown');
+}
+function update(){
+    Intercom('update');
+}
+function hide(){
+    Intercom('hide');
+}
+function showNew(){
+    Intercom('showMessages');
+}
+function show(){
+    Intercom('show');
+  }
+function apiUrl(){
+  let request = new XMLHttpRequest();
+  request.open("GET", "https://api.intercom.io/contacts/617b4ec73c862122533455e0");
+  request.setRequestHeader('Authentication', "dG9rOmMwMzU0Y2ZiXzI1MDdfNDVmOV84Njc5XzJmYmMzNDZiYzc5YToxOjA=");
+  request.setRequestHeader('Accept', 'application/json');
+  request.send();
+  request.onload = () => {
+    if (request.status === 200) {
+      // by default the response comes in the string format, we need to parse the data into JSON
+      console.log(JSON.parse(request.response));
+    } else {
+      console.log(`error ${request.status} ${request.statusText}`);
+    }
+  }
+};
+function grabVisitorId(){
+    Intercom('getVisitorId')
+    console.log(getVisitorId)
+}
+function getVal() {
+    const val = document.querySelector('input').value;
+    console.log(val);
+    Intercom('boot', {  
+        app_id: `${val}`
+    });
+  }
+
+
+</script>

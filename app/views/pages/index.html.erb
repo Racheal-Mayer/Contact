@@ -1,0 +1,196 @@
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Bebas+Neue|Shadows+Into+Light|Special+Elite&display=swap" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@200&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+
+<style>
+::selection {
+        color: white;
+        background: pink;
+    }
+body{
+    background:url("https://images.unsplash.com/photo-1549700337-d4fcfce79ae7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+}
+a{
+  color:pink;
+}
+a:hover{
+  color:pink;
+}
+*{
+  vertical-align:top;
+  color:white;
+}
+th, td {
+  border-bottom: 1px solid #ddd;
+}
+table, th, td {
+  border: 1px solid;
+}
+tr:hover {background-color: pink;
+}
+.btn {
+      color: rgb(230, 16, 133);
+    }
+    input:focus {
+      outline: none;
+    }
+    .btn:hover {
+      color: white;
+    }
+*{
+  font-family: 'Roboto Serif', sans-serif;
+  margin:20px;
+}
+</style>
+
+<br><br>
+<%= link_to 'Back to Post page', new_page_path%>
+<br><br>
+<h1> Workspace Dashboard </h1>
+<div style="display:inline-block;">
+Tags: <%= @counts.tag['count'] %><br>
+Users: <%= @counts.user['count'] %><br>
+Companies: <%= @counts.company['count'] %><br>
+Leads: <%= @counts.lead['count'] %><br>
+Segments: <%= @counts.segment['count'] %><br>
+</div>
+<div style="display:inline-block; margin-left: 100px;">
+<h1> All Teams </h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Admin_ids</th>
+  </tr>
+  <tr>
+ <% @teams.each do |teams|%>
+    <td> <%= teams.name%> </td>
+    <td> <%= teams.admin_ids%> </td>
+  </tr>
+   <% end %>
+</table>
+</div>
+<h1 style="margin-top:-90px;"> All admins </h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+     <th>Has inbox seat</th>
+  </tr>
+  <tr>
+ <% @admins.each do |admin|%>
+    <td> <%= admin.name%> </td>
+    <td> <%= admin.email%> </td>
+    <td> <%= admin.has_inbox_seat %> </td>
+  </tr>
+   <% end %>
+</table>
+
+<h1> All Contacts </h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Role</th>
+    <th>User ID</th>
+    <th>Location</th>
+     <th>Last Seen</th>
+     <th>Hard Bounced</th>
+     <th>Marked as Spam</th>
+     <th>Unsubscribed</th>
+     <th> Update </th>
+    <th> Delete </th>
+  </tr>
+  <tr>
+  <% @contacts.each do |contact|%>
+    <td> <%= contact.name %> </td>
+    <td> <%= contact.email %> </td>
+    <td> <%= contact.role %> </td>
+     <td> <%= contact.id %> </td>
+     <td> <%= contact.location.city %> <%= contact.location.region %>, <%= contact.location.country %></td>
+    <td> <%= contact.last_seen_at %> </td>
+    <td> <%= contact.has_hard_bounced %> </td>
+    <td> <%= contact.marked_email_as_spam %> </td>
+    <td> <%= contact.unsubscribed_from_emails%> </td>
+    <td> <a class="btn" href="/updatec/<%=contact.id%>"> Update </a> </td>
+    <td> <a class="btn" href="/delete/<%=contact.id%>" data-method="delete"> Delete </a> </td>
+
+  </tr>
+   <% end %>
+</table>
+<br>
+<div style="display:inline-block">
+<h1> All Open Conversations </h1>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Started</th>
+    <th>Time to admin reply</th>
+    <th>Median time to reply</th>
+     <th>Conversation Rating</th>
+    <th>Teammates</th>
+  </tr>
+  <tr>
+ <% @conversations.each do |convo|%>
+    <td> <%= convo.id%> </td>
+      <td> <%= convo.created_at%> </td>
+      <td> <%= convo.statistics.time_to_admin_reply%> </td>
+      <td> <%= convo.statistics.median_time_to_reply%> </td>
+      <td> <%= convo.conversation_rating%> </td>
+      <td> <%= convo.teammates %> </td>
+  </tr>
+   <% end %>
+</table>
+</div>
+<h1> All Articles </h1>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Update</th>
+    <th>Delete</th>
+  </tr>
+  <tr>
+ <% @articles.each do |article|%>
+    <td> <%= article.title%> </td>
+    <td> <%= article.description%> </td>
+    <td> <a class="btn" href="/updateArticle/<%=article.id%>"> Update </a> </td>
+     <td> <a class="btn" href="/deleteArticle/<%=article.id%>" data-method="delete"> Delete </a> </td>
+  </tr>
+   <% end %>
+</table>
+<br><br>
+<div style="display:inline-block">
+<h1> All Attributes </h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Data Type</th>
+  </tr>
+  <tr>
+ <% @attributes.each do |attributes|%>
+    <td> <%= attributes.name%> </td>
+    <td> <%= attributes.data_type%> </td>
+  </tr>
+   <% end %>
+</table>
+</div>
+
+<br><br><br>
+
+<%= link_to 'Reports', reports_path%>
+   <script>
+        var app_id;
+        window.intercomSettings = {
+          app_id: 'mgkzgbro'
+        };
+      </script>
+     
+      <script>
+
+      // We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/mgkzgbro'
+      (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/mgkzgbro';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+      </script>
+
